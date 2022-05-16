@@ -1,0 +1,179 @@
+id,name,clubs_nb,contracts,visited,price,is_vip
+ws,Samoa,18,30,false,24000,false
+ge,Géorgie,20,65,false,25000,false
+cz,République Tchèque,20,87,false,25000,false
+ir,Iran,5,40,false,26000,false
+mt,Malte,4,40,false,28000,false
+si,Slovénie,8,22,false,29000,false
+az,Azerbaïdjan,6,14,false,29000,false
+zw,Zimbabwe,4,28,false,29000,false
+ba,Bosnie-Herzégovine,6,27,false,31000,false
+ae,Emirats arabes unis,12,44,false,31000,false
+ee,Estonie,4,12,false,33000,false
+at,Autriche,8,40,false,33000,false
+gh,Ghana,4,37,false,36000,false
+uz,Ouzbékistan,3,10,false,36000,false
+ph,Philippines,13,23,false,38000,false
+fi,Finlande,15,74,false,38000,false
+bh,Bahrein,2,9,false,38000,false
+bn,Brunéi Darussalam,3,10,false,39000,false
+gr,Grèce,5,25,false,41000,false
+gi,Gibraltar,2,9,false,45000,false
+ua,Ukraine,17,55,false,45000,false
+kg,Kirghizistan,3,14,false,45000,false
+nl,Pays-Bas,9,65,false,45000,false
+lv,Lettonie,6,11,false,45000,false
+se,Suède,5,20,false,46000,false
+tn,Tunisie,3,10,false,46000,false
+by,Bélarus,2,10,false,46000,false
+sk,Slovaquie,3,6,false,46000,false
+ck,Iles Cook,1,4,false,46000,false
+mz,Mozambique,2,6,false,47000,false
+no,Norvège,9,35,false,47000,false
+mv,Maldives,2,6,false,47000,false
+rs,Serbie,3,13,false,48000,false
+tr,Turquie,3,14,false,49000,false
+sa,Arabie Saoudite,2,7,false,49000,false
+za,Afrique du Sud,5,32,false,49000,false
+hu,Hongrie,4,46,false,50000,false
+ru,Russie,7,33,false,51000,false
+th,Thaïlande,1,4,false,51000,false
+cl,Chili,1,30,false,51000,false
+co,Colombie,18,70,false,51000,false
+en,Angleterre,11,42,false,52000,false
+in,Inde,2,24,false,52000,false
+dz,Algérie,4,14,false,52000,false
+ro,Roumanie,4,7,false,52000,false
+ie,Irlande,4,18,false,52000,false
+mk,Macédoine,4,16,false,52000,false
+dk,Danemark,5,25,false,53000,false
+ec,Equateur,2,37,false,53000,false
+au,Australie,5,15,true,53000,false
+cn,Chine,4,10,false,53000,false
+al,Albanie,4,18,false,53000,false
+cm,Cameroun,6,13,false,53000,false
+vn,Viet Nam,4,15,false,53000,false
+lu,Luxembourg,4,14,false,53000,false
+lb,Liban,4,12,false,54000,false
+hn,Honduras,4,16,false,55000,false
+md,Moldavie,0,3,false,55000,false
+pl,Pologne,4,21,false,55000,false
+fo,Iles Féroé,3,6,false,55000,false
+tt,Trinité-et-Tobago,2,14,false,55000,false
+sc,Ecosse,8,18,false,55000,false
+hr,Croatie,7,28,false,55000,false
+jo,Jordanie,1,18,false,57000,false
+kw,Koweït,1,11,false,57000,false
+lt,Lituanie,4,13,false,57000,false
+my,Malaisie,11,6,false,57000,false
+ma,Maroc,8,48,false,57000,false
+sg,Singapour,1,7,false,57000,false
+pe,Pérou,1,13,false,58000,false
+ng,Nigéria,6,25,false,59000,false
+so,Somalie,2,6,false,60000,false
+nz,Nouvelle-Zélande,17,50,false,60000,false
+bf,Burkina Faso,1,5,false,61000,false
+ga,Gabon,0,11,false,61000,false
+qa,Qatar,1,6,false,61000,false
+sv,El Salvador,0,10,false,61000,false
+ye,Yémen,3,4,false,61000,false
+sd,Soudan,1,5,false,61000,false
+jm,Jamaïque,6,33,false,62000,false
+bg,Bulgarie,2,9,false,62000,false
+kz,Kazakhstan,3,15,false,62000,false
+et,Ethiopie,2,4,false,63000,false
+pa,Panama,2,5,false,63000,false
+tg,Togo,2,6,false,63000,false
+ke,Kenya,2,2,false,63000,false
+es,Espagne,17,49,false,63000,false
+me,Monténégro,0,18,false,64000,false
+ni,Nicaragua,5,4,false,64000,false
+uy,Uruguay,6,21,false,65000,false
+mn,Mongolie,0,5,false,65000,false
+td,Tchad,2,5,false,66000,false
+bw,Botswana,3,6,false,66000,false
+py,Paraguay,8,17,false,69000,false
+jp,Japon,6,49,false,70000,false
+eg,Egypte,2,21,false,71000,false
+mx,Mexique,4,38,false,73000,false
+ug,Ouganda,1,1,false,75000,false
+fj,Fidji,1,4,false,75000,false
+np,Népal,2,14,false,75000,false
+us,Etats-Unis,7,42,false,78000,false
+tz,Tanzanie,1,1,false,78000,false
+ar,Argentine,4,39,false,78000,false
+ao,Angola,0,3,false,78000,false
+gt,Guatemala,1,1,false,79000,false
+is,Islande,4,20,false,80000,false
+kh,Cambodge,2,4,false,80000,false
+mw,Malawi,0,0,false,80000,false
+cg,Congo,4,16,false,80000,false
+bo,Bolivie,2,8,false,81000,false
+id,Indonésie,1,5,false,83000,false
+am,Arménie,0,4,false,86000,false
+br,Brésil,17,125,false,90000,false
+sz,Swaziland,1,1,false,90000,false
+zm,Zambie,0,3,false,91000,false
+gq,Guinée équatoriale,0,4,false,91000,false
+ci,Côte d'Ivoire,1,9,false,96000,false
+it,Italie,7,48,false,96000,false
+de,Allemagne,8,37,false,96000,false
+bz,Bélize,1,20,false,97000,false
+cd,RD Congo,0,3,false,98000,false
+iq,Iraq,2,5,false,99000,false
+ml,Mali,2,11,false,101000,false
+pt,Portugal,12,30,false,104000,false
+gw,Guinée-Bissau,1,8,false,116000,false
+cr,Costa Rica,1,4,false,125000,false
+ch,Suisse,2,12,false,126000,false
+ca,Canada,4,25,false,127000,false
+cy,Chypre,1,20,false,130000,false
+hk,Hong Kong,0,6,false,145000,false
+la,Laos,3,12,false,146000,false
+to,Tonga,0,4,false,151000,false
+tj,Tadjikistan,0,4,false,158000,true
+tm,Turkménistan,0,2,false,177000,true
+mu,Maurice,1,4,false,193000,true
+ls,Lesotho,1,3,false,207000,true
+om,Oman,1,0,false,214000,true
+mm,Birmanie,0,0,false,216000,true
+li,Liechtenstein,0,7,false,218000,true
+na,Namibie,0,0,false,236000,true
+bm,Bermudes,0,0,false,240000,true
+tv,Tuvalu,0,0,false,255000,true
+bj,Bénin,0,0,false,257000,true
+aw,Aruba,0,0,false,264000,true
+bb,Barbade,0,0,false,279000,true
+rw,Rwanda,1,3,false,279000,true
+mo,Macao,1,0,false,285000,true
+ly,Libye,0,0,false,287000,true
+bi,Burundi,0,0,false,289000,true
+gn,Guinée,3,23,false,294000,false
+bs,Bahamas,1,5,false,304000,true
+cv,Cap-Vert,2,13,false,307000,false
+ht,Haïti,0,3,false,309000,true
+wl,Pays de galles,0,3,false,313000,true
+sl,Sierra Leone,1,0,false,319000,true
+cu,Cuba,4,21,false,322000,false
+bt,Bhoutan,0,0,false,340000,true
+gm,Gambie,0,0,false,340000,false
+ne,Niger,0,0,false,347000,true
+cf,Centrafrique,1,6,false,347000,false
+kr,Corée du Sud,1,7,false,349000,false
+mg,Madagascar,0,0,false,353000,false
+sn,Sénégal,2,19,false,385000,false
+lr,Libéria,1,0,false,422000,true
+af,Afghanistan,0,0,false,473000,true
+mr,Mauritanie,2,2,false,488000,false
+ad,Andorre,0,0,false,492000,true
+km,Comores,0,0,false,498000,true
+do,République Dominicaine,1,2,false,505000,true
+vu,Vanuatu,0,0,false,650000,true
+lk,Sri Lanka,0,0,false,703000,true
+pk,Pakistan,0,0,false,749000,true
+sy,Syrie,0,0,false,773000,true
+gd,Grenade,0,0,false,898000,true
+be,Belgique,16,59,false,900000,false
+fr,France,25,155,false,900000,false
+dj,Djibouti,0,0,false,1400000,true
+bd,Bangladesh,0,0,false,1700000,true
