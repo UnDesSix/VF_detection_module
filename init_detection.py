@@ -6,6 +6,8 @@ from build_csv_country import build_csv_countries
 from build_list_city import build_list_city
 from build_list_15yo import build_list_15yo
 
+from variables import countries_csv_path
+
 def create_tables():
 
 	# Connect to DB
@@ -26,7 +28,7 @@ def create_tables():
 
 	# Open CSV files parse each line and insert values
 	# with open('csv/countries.csv', 'r') as f: DEBUG
-	with open('detection_tools/csv/countries.csv', 'r') as f:
+	with open(countries_csv_path, 'r') as f:
 		reader = csv.reader(f)
 		next(reader) # Skip the header row.
 		for row in reader:
@@ -35,7 +37,7 @@ def create_tables():
 			row
 		)
 
-	# with open('detection_tools/csv/player_detect_log.csv', 'r') as f:
+	# with open(players_csv_path, 'r') as f:
 	# 	reader = csv.reader(f)
 	# 	next(reader) # Skip the header row.
 	# 	for row in reader:

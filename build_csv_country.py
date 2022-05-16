@@ -1,6 +1,7 @@
 import requests
 import re
 from utils import convert_price, write_into_csv_file
+from variables import cookies, headers, countries_csv_path
 
 # Get each part of codes where infos are stored
 # Return those parts as a list
@@ -36,37 +37,9 @@ def parse_page(html_content):
 	return list
 
 # Create countries csv file
-def build_csv_countries():
-	cookies = {
-		'lang': 'fr',
-		'firebase_token': 'null',
-		'partner': '1',
-    'sessid': '3853081975022313880',
-    'auth': 'uid=564504&secret=TGVQaGVuaXg%3D',
-		'minichat_date': 'null',
-	}
-	headers = {
-		'User-Agent': 'Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0',
-		'Accept': '*/*',
-		'Accept-Language': 'fr-FR',
-		'Accept-Encoding': 'gzip, deflate, br',
-		'Content-Type': 'application/x-www-form-urlencoded',
-		'X-Requested-With': 'XMLHttpRequest',
-		'X-Lang': 'fr',
-    'X-Storage': 'sessid=3853081975022313880&auth=uid%3D564504%26secret%3DTGVQaGVuaXg%253D&lang=en&partner=1&minichat_date=0',
-    'X-Sessid': '3853081975022313880',
-		'Connection': 'keep-alive',
-		'Referer': 'https://www.virtuafoot.com/',
-		'Sec-Fetch-Dest': 'empty',
-		'Sec-Fetch-Mode': 'cors',
-		'Sec-Fetch-Site': 'same-origin',
-		'Pragma': 'no-cache',
-		'Cache-Control': 'no-cache',
-	}
-	
+def build_csv_countries():	
 	# Create csv file with header 
-	# csv_file = open('csv/countries.csv', 'w') DEBUG
-	csv_file = open('detection_tools/csv/countries.csv', 'w')
+	csv_file = open(countries_csv_path, 'w')
 	csv_file.write('id,name,clubs_nb,contracts,visited,price,is_vip\n')
 
 	# Get HTML page and split into group of html

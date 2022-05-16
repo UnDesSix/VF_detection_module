@@ -1,6 +1,8 @@
 import psycopg2
 import csv
 
+from variables import players_csv_path
+
 def update_table():
 	conn = psycopg2.connect(database='virtuadata_db',
 							user='root', password='root',
@@ -10,7 +12,7 @@ def update_table():
 	cursor = conn.cursor()
 
 	# UPDATE CLUBS
-	with open('detection_tools/csv/player_detect_log.csv', 'r') as f:
+	with open(players_csv_path, 'r') as f:
 		reader = csv.reader(f)
 		next(reader) # Skip the header row.
 		for row in reader:

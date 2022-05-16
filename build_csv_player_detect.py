@@ -2,6 +2,8 @@ import requests
 import random
 import time
 import re
+# from variables import cookies
+from variables import cookies, headers
 
 def sleep_random():
 	random_time = round(random.uniform(6.00, 8.00), 2)
@@ -39,33 +41,6 @@ def parse_page(html_content, country_id, city_id, player_id):
 	return list
 
 def build_player_detect_lists(country_id, city_id, player_id):
-	cookies = {
-		'lang': 'fr',
-		'firebase_token': 'null',
-		'partner': '1',
-    'sessid': '3853081975022313880',
-    'auth': 'uid=564504&secret=TGVQaGVuaXg%3D',
-		'minichat_date': 'null',
-	}
-	headers = {
-		'User-Agent': 'Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0',
-		'Accept': '*/*',
-		'Accept-Language': 'fr-FR',
-		'Accept-Encoding': 'gzip, deflate, br',
-		'Content-Type': 'application/x-www-form-urlencoded',
-		'X-Requested-With': 'XMLHttpRequest',
-		'X-Lang': 'fr',
-    'X-Storage': 'sessid=3853081975022313880&auth=uid%3D564504%26secret%3DTGVQaGVuaXg%253D',
-    'X-Sessid': '3853081975022313880',
-		'Connection': 'keep-alive',
-		'Referer': 'https://www.virtuafoot.com/',
-		'Sec-Fetch-Dest': 'empty',
-		'Sec-Fetch-Mode': 'cors',
-		'Sec-Fetch-Site': 'same-origin',
-		'Pragma': 'no-cache',
-		'Cache-Control': 'no-cache',
-	}
-
 	url =  'https://www.virtuafoot.com/formation.php?detect&id=' + player_id
 	requests.get(url, headers=headers, cookies=cookies)
 	sleep_random()
