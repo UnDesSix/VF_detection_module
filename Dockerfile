@@ -1,30 +1,11 @@
-FROM ubuntu:latest
+FROM python:3
 
-RUN mkdir /app
+ADD requirements.txt /
 
-ARG DEBIAN_FRONTEND=noninteractive
+RUN pip install -r requirements.txt
 
-RUN apt-get update && \
-	apt-get install -y libpq-dev python3-dev unixodbc-dev && \
-	apt-get install -y vim cron && \
-	apt-get install -y python3.9 python3-pip
+ADD script /script
 
-ADD config/requirements.txt /app
+WORKDIR script
 
-WORKDIR /app
-
-RUN pip install --no-cache-dir -r config/requirements.txt
-RUN /usr/bin/crontab config/crontab.txt
-
-RUN	ln -fs /usr/share/zoneinfo/Europe/Paris /etc/localtime && \
-	dpkg-reconfigure -f noninteractive tzdata
-
-RUN mkdir -p /root/transfers_tools/csv /root/detection_tools/list/ /root/detection_tools/csv/
-RUN touch /root/detection_tools/file.log
-
-ADD src /app
-
-ADD init_db.sh /app
-ADD update_db.sh /app
-
-CMD ["cron", "-f"]
+CMD ["python3", "main.py"]
