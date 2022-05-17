@@ -8,7 +8,7 @@ from build_csv_player_detect import build_player_detect_lists
 
 from utils import write_into_csv_file
 
-from variables import cookies, headers, log_file_name, countries_file_name, cities_file_name, players_file_name, players_csv_path
+from variables import cookies, headers, log_file_name, countries_txt_path, cities_txt_path, players_txt_path, players_csv_path, detect_nb_min, detect_nb_max
 # TEST VARIABLES
 # log_file_name = 'file.log'
 # countries_file_name = 'list/countries.txt'
@@ -41,7 +41,7 @@ def change_city(city_id):
 # Called if last city is reached
 def get_next_country(country_id, city_id, player_id):
 	# Save all IDs in a list and find the index that match the current ID
-	with open(countries_file_name, 'r') as f:
+	with open(countries_txt_path, 'r') as f:
 		countries = [line.strip() for line in f]
 	index = countries.index(country_id)
 	
@@ -52,7 +52,7 @@ def get_next_country(country_id, city_id, player_id):
 	# Get first city ID from the text files
 	change_country(country_id)
 	build_list_city()
-	with open(cities_file_name, 'r') as f:
+	with open(cities_txt_path, 'r') as f:
 		cities = [line.strip() for line in f]
 	city_id = cities[0]
 
@@ -61,7 +61,7 @@ def get_next_country(country_id, city_id, player_id):
 	change_city(city_id)
 	build_list_15yo()
 	
-	with open(players_file_name, 'r') as f:
+	with open(players_txt_path, 'r') as f:
 		players = [line.strip() for line in f]
 	player_id = players[0]
 
@@ -71,7 +71,7 @@ def get_next_country(country_id, city_id, player_id):
 # Called if last players is reached
 def get_next_city(country_id, city_id, player_id):
 	# Save all IDs in a list and find the index that match the current ID
-	with open(cities_file_name, 'r') as f:
+	with open(cities_txt_path, 'r') as f:
 		cities = [line.strip() for line in f]
 	index = cities.index(city_id)
 
@@ -88,11 +88,11 @@ def get_next_city(country_id, city_id, player_id):
 	build_list_15yo()
 
 	# Recursive in order to fix empty players file
-	if os.stat(players_file_name).st_size == 0:
+	if os.stat(players_txt_path).st_size == 0:
 		return get_next_city(country_id, city_id, player_id)
 
 	# Get first player ID from the text file
-	with open(players_file_name, 'r') as f:
+	with open(players_txt_path, 'r') as f:
 		players = [line.strip() for line in f]
 	player_id = players[0]
 
@@ -100,7 +100,7 @@ def get_next_city(country_id, city_id, player_id):
 
 # Get next player ID given the current country, city and player IDs
 def get_next_player(country_id, city_id, player_id):
-	with open(players_file_name, 'r') as f:
+	with open(players_txt_path, 'r') as f:
 		players = [line.strip() for line in f]
 	index = players.index(player_id)
 	if index + 1 == len(players):
@@ -111,8 +111,7 @@ def get_next_player(country_id, city_id, player_id):
 # Scrap an random amount of players in the the range [500,600]
 # Store the result in a CSV file and save the last country, city and player IDs
 def routine():
-	# detect_nb = random.randint(500, 600)
-	detect_nb = random.randint(5, 8)
+	detect_nb = random.randint(detect_nb_min, detect_nb_max)
 
 	# Create csv file with header
 	# csv_file = open('csv/player_detect_log.csv', 'w') DEBUG

@@ -1,12 +1,12 @@
 import psycopg2
 import csv
 
-from routine import change_country, change_city, save_log, countries_file_name, cities_file_name, players_file_name
+from routine import change_country, change_city, save_log
 from build_csv_country import build_csv_countries
 from build_list_city import build_list_city
 from build_list_15yo import build_list_15yo
 
-from variables import countries_csv_path
+from variables import countries_csv_path, countries_txt_path, cities_txt_path, players_txt_path
 
 def create_tables():
 
@@ -57,25 +57,25 @@ def init_trip():
 
 	# sort_countries() and return a file with countires ID
 	# In the mid time build a list of countries
-	with open(countries_file_name, 'w') as f:
+	with open(countries_txt_path, 'w') as f:
 		f.write('bn\nws\nge\ncz\nir\nmt\nsi\naz\nzw\n')
 
 	# Go to the first country in the list
-	with open(countries_file_name, 'r') as f:
+	with open(countries_txt_path, 'r') as f:
 		countries = [line.strip() for line in f]
 	country_id = countries[0]
 	change_country(country_id)
 
 	# Build cities list and go to the first city in the list
 	build_list_city()
-	with open(cities_file_name, 'r') as f:
+	with open(cities_txt_path, 'r') as f:
 		cities = [line.strip() for line in f]
 	city_id = cities[0]
 	change_city(city_id)
 
 	# Build players list
 	build_list_15yo()
-	with open(players_file_name, 'r') as f:
+	with open(players_txt_path, 'r') as f:
 		players = [line.strip() for line in f]
 	player_id = players[0]
 

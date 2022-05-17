@@ -1,6 +1,6 @@
 import requests
 import re
-from variables import players_txt_path
+from variables import players_txt_path, headers, cookies
 
 # Get final page, which equal to the number of pages to scrape
 def get_pages_nb(html_content):
