@@ -1,5 +1,0 @@
-pandas==1.4.1
-psycopg2==2.9.3
-psycopg2_binary==2.9.3
-requests==2.27.1
-SQLAlchemy==1.4.32

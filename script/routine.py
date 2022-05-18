@@ -115,8 +115,8 @@ def routine():
 
 	# Create csv file with header
 	# csv_file = open('csv/player_detect_log.csv', 'w') DEBUG
-	csv_file = open(players_csv_path, 'w')
-	csv_file.write('country_id,city_id,id,age,name,position,instruction,note\n')
+	csv_file = open(players_csv_path, 'a')
+	# csv_file.write('country_id,city_id,id,age,name,position,instruction,note\n')
 
 	# Create list to contain the players detected (in order to write it all at once in csv file)
 	players_detect_lists = []

@@ -10,10 +10,8 @@ def sleep_random():
 	time.sleep(random_time)
 
 def parse_page(html_content, country_id, city_id, player_id):
-	print(country_id, city_id, player_id)
 	list = []
 
-	print(country_id, city_id, player_id)
 	# get country_id
 	list.append(country_id)
 	# get city_id
