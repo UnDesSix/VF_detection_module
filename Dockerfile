@@ -8,4 +8,4 @@ ADD script /script
 
 WORKDIR script
 
-CMD ["python3", "main.py"]
+CMD ["/bin/sh", "routine.sh"]
