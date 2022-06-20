@@ -25,7 +25,7 @@ def parse_page(html_content):
 	list = []
 	for item in html_content:
 		age = re.findall(r'></td><td class="w50 alc">(.*?)<', item)
-		if age[0] == '15':
+		if age[0] == '15' or age[0] == '16':
 			id = re.findall(r'&amp;id=(.*?)&', item)
 			list.append(id[0])
 	return list
